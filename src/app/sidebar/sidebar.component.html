@@ -1,0 +1,24 @@
+<div class="sidebar">
+  <a class="sidebar__link" href="app/board">
+    <div class="sidebar__logo">
+      <app-logo></app-logo>
+    </div>
+  </a>
+  <a class="sidebar__link" href="app/board">
+    <div class="sidebar__board board">
+      <mat-icon class="board__icon">insert_chart_outlined</mat-icon>
+      <div class="board__text">Board</div>
+    </div>
+  </a>
+  <section class="sidebar__filters filters">
+    <header class="filters__header">Filters</header>
+    <div class="filters__my my-filter" (click)="toggleMyFilter()" [ngClass]="myFilterActive ? 'my-filter__active' : ''">
+      <mat-icon class="my-filter__icon">filter_list</mat-icon>
+      <div class="my-filter__text">My issues</div>
+    </div>
+    <div class="filters__date date-filter">
+      <mat-icon class="date-filter__icon">today</mat-icon>
+      <div class="date-filter__text">Issues by date</div>
+    </div>
+  </section>
+</div>

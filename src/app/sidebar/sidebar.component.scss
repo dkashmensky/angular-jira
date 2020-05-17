@@ -1,0 +1,66 @@
+@import "~@angular/material/theming";
+@import '../../variables.scss';
+
+@mixin nav-text {
+  align-items: center;
+  display: flex;
+  height: 24px;
+  padding-left: 7px;
+}
+
+.sidebar {
+  background: mat-color($primary);
+  box-sizing: border-box;
+  color: mat-color($font-side);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 225px;
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.board {
+  align-items: center;
+  display: flex;
+  padding: 10px 20px;
+
+  &__text {
+    @include nav-text();
+  }
+}
+
+.filters {
+  padding: 20px;
+
+  &__header {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__my {
+    padding-top: 10px;
+  }
+
+  &__date {
+    padding-top: 20px;
+  }
+}
+
+.my-filter,
+.date-filter {
+  cursor: pointer;
+  display: flex;
+
+  &__text {
+    @include nav-text();
+  }
+
+  &__active {
+    color: $font-side-active;
+    font-weight: bold;
+  }
+}
