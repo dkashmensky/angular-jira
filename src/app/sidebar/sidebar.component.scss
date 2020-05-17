@@ -63,4 +63,24 @@
     color: $font-side-active;
     font-weight: bold;
   }
+
+  &__menu {
+    padding-left: 35px;
+  }
+}
+
+.filter-list {
+  background: mat-color($font-side);
+  border-radius: 12px;
+  color: $black;
+  margin-top: 10px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__elem {
+    padding: 10px 20px;
+  }
 }

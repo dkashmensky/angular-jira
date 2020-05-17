@@ -12,13 +12,27 @@
   </a>
   <section class="sidebar__filters filters">
     <header class="filters__header">Filters</header>
-    <div class="filters__my my-filter" (click)="toggleMyFilter()" [ngClass]="myFilterActive ? 'my-filter__active' : ''">
+    <div class="filters__my my-filter"
+        (click)="toggleMyFilter()"
+        [ngClass]="myFilterActive ? 'my-filter__active' : ''">
       <mat-icon class="my-filter__icon">filter_list</mat-icon>
       <div class="my-filter__text">My issues</div>
     </div>
-    <div class="filters__date date-filter">
+    <div class="filters__date date-filter"
+        (click)="toggleList()"
+        [ngClass]="dateFilter ? 'date-filter__active' : ''">
       <mat-icon class="date-filter__icon">today</mat-icon>
       <div class="date-filter__text">Issues by date</div>
+      <mat-icon class="date-filter__menu">{{ showList ? 'menu_open' : 'menu' }}</mat-icon>
+    </div>
+    <div class="filter-list" [@openCloseList]="showList ? 'open' : 'close'">
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="dateFilter" class="filter-list__group">
+        <mat-radio-button class="filter-list__elem" value="">None</mat-radio-button>
+        <mat-radio-button class="filter-list__elem" value="today">Today</mat-radio-button>
+        <mat-radio-button class="filter-list__elem" value="yesterday">Yesterday</mat-radio-button>
+        <mat-radio-button class="filter-list__elem" value="weeks">Last two weeks</mat-radio-button>
+        <mat-radio-button class="filter-list__elem" value="month">Last month</mat-radio-button>
+      </mat-radio-group>
     </div>
   </section>
 </div>
