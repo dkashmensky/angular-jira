@@ -1,1 +1,21 @@
-<p>header works!</p>
+<div class="header">
+  <div class="header__button">
+    <button class="button">Create</button>
+  </div>
+  <div class="header__divider"></div>
+  <div class="header__info info" (click)="showLogout = !showLogout">
+    <div class="info__name">
+      username
+    </div>
+    <div class="info__avatar">
+      D
+    </div>
+  </div>
+</div>
+
+<div class="logout" [@openCloseLogout]="showLogout ? 'open' : 'close'">
+  <div class="logout__block">
+    <mat-icon class="logout__icon">exit_to_app</mat-icon>
+    <div class="logout__text">Logout</div>
+  </div>
+</div>

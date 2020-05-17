@@ -1,5 +1,5 @@
-@import "~@angular/material/theming";
-@import '../../variables.scss';
+@import '~@angular/material/theming';
+@import '../variables.scss';
 
 @mixin nav-text {
   align-items: center;
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 225px;
+  width: $sidebarWidth;
 
   &__link {
     color: inherit;

@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+@import './variables.scss';
+
+.button {
+  background: mat-color($primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: mat-color($font-side);
+  max-height: 30px;
+  outline: none;
+  padding: 7px 30px;
+
+  &:hover {
+    background: darken(mat-color($primary), 5%);
+  }
+
+  &:active {
+    background: darken(mat-color($primary), 10%);
+  }
+}

@@ -1,10 +1,12 @@
 @import "~@angular/material/theming";
 
+// colors
 $primary: mat-palette($mat-indigo);
 $accent: mat-palette($mat-pink, A200, A100, A400);
 $warn: mat-palette($mat-red);
-
 $font-side: mat-palette($mat-indigo, 50);
 $font-side-active: #fff;
-
 $black: #000;
+
+// sizes
+$sidebarWidth: 225px;
