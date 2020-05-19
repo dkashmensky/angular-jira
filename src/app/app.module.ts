@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -34,7 +35,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatIconModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

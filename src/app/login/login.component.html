@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="wrapper">
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="loginRequest(loginForm.value)">
+    <div>
+      <app-logo></app-logo>
+    </div>
+    <div>
+      <mat-form-field class="user-picker__field">
+        <mat-label class="user-picker__label">Email</mat-label>
+        <input class="login-form__email" matInput autocomplete="off" formControlName="email" type="email">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="user-picker__field">
+        <mat-label class="user-picker__label">Password</mat-label>
+        <input class="login-form__password" matInput autocomplete="off" formControlName="password" type="password">
+      </mat-form-field>
+    </div>
+    <div>
+      <button class="login-form__submit button">Login</button>
+    </div>
+  </form>
+</div>
